@@ -2,36 +2,33 @@
 
 *Creational patterns:*
 
-- ul
-+ ul Factory Method
-+ ul -Abstract Factory
-+ ul Builder
-+ ul Prototype
-+ ul -Singletone
++ Factory Method
++ -Abstract Factory
++ Builder
++ Prototype
++ -Singletone
 
 
 *Structural patterns:*
 
--ul
-+ul -Composite
-+ul -Decorator
-+ul Adapter
-+ul -Proxy
-+ul -Facade
-+ul -Bridge
-+ul -Flyweight
++ -Composite
++ -Decorator
++ Adapter
++ -Proxy
++ -Facade
++ -Bridge
++ -Flyweight
 
 
 *Behavioural patterns:*
 
--ul
-+ul -Strategy
-+ul -State
-+ul -Commant
-+ul -Iterator
-+ul -Mediator
-+ul -Observer
-+ul -Visitor
-+ul -Memento
-+ul -Chain of Responsibility
-+ul -Template method
++ -Strategy
++ -State
++ -Commant
++ -Iterator
++ -Mediator
++ -Observer
++ -Visitor
++ -Memento
++ -Chain of Responsibility
++ -Template method
