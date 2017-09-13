@@ -6,7 +6,7 @@
 + [Abstract Factory](https://github.com/1inq/DesignPatterns/tree/master/AbstractFactory)
 + [Builder](https://github.com/1inq/DesignPatterns/tree/master/Builder)
 + [Prototype](https://github.com/1inq/DesignPatterns/tree/master/Prototype)
-+ ~~Singletone~~
++ [Singleton](https://github.com/1inq/DesignPatterns/tree/master/Singleton)
 
 
 *Structural patterns:*
