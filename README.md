@@ -10,7 +10,7 @@
 
 *Structural patterns:*
 + ~~Composite~~
-+ ~~Decorator~~
++ [Decorator] (https://github.com/1inq/DesignPatterns/tree/master/ADecorator)
 + [Adapter](https://github.com/1inq/DesignPatterns/tree/master/Adapter)
 + ~~Proxy~~
 + ~~Facade~~
