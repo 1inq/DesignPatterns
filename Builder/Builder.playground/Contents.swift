@@ -78,18 +78,11 @@ class FactorySalesMan {
     }
     
     func constuctPhone() {
-        if let builder = builder as? LowPricePhoneBuilder {
-            
-            builder.build()
-            
-        } else if let builder = builder as? HighPricePhoneBuilder {
-            
-            builder.build()
-        }
+        builder.build()
     }
 }
 
-//using different builders
+//usage different builders
 
 let cheapPhoneBuilder = LowPricePhoneBuilder()
 let expensivePhoneBuilder = HighPricePhoneBuilder()
