@@ -2,130 +2,89 @@
 
 import UIKit
 
-class AndriodPhone {
+class AndroidPhone {
     
-    var osVersion = ""
-    var name = ""
-    var cpuCodeName = ""
-    var RAMsize = 0
+    var osVersion : String = ""
+    var name :String = ""
+    var cpuCodeName :String = ""
+    var RAMsize :Int = 0
     var osVersionCode : Float = 0
-    var launcher = ""
-    
-    func setOSVersion() {
-        self.osVersion = ""
-    }
-    
-    func setName() {
-        self.name = ""
-    }
-    
-    func setCPUCodeName() {
-        self.cpuCodeName = ""
-    }
-    
-    func setRAMsize() {
-        self.RAMsize = 0
-    }
-    
-    func setOSVersionCode() {
-        self.osVersionCode = 0
-    }
-    
-    func setLauncher() {
-        self.osVersion = ""
-    }
+    var launcher :String = ""
 }
 
-class AndroidPhoneBuilder {
+protocol BuilderProtocol {
     
-    let phone = AndriodPhone()
+    func setOSVersion()
+    func setName()
+    func setCPUCodeName()
+    func setRAMsize()
+    func setOSVersionCode()
+    func setLauncher()
+    func build()
     
-    func getPhone() -> AndriodPhone  {
+}
+class AndroidPhoneBuilder: BuilderProtocol{
+    
+    var phone = AndroidPhone()
+    func getPhone() -> AndroidPhone {
         return self.phone
+    }
+    func setOSVersion(){}
+    func setName(){}
+    func setCPUCodeName(){}
+    func setRAMsize(){}
+    func setOSVersionCode(){}
+    func setLauncher(){}
+    func build(){
+        self.setOSVersion()
+        self.setName()
+        self.setCPUCodeName()
+        self.setRAMsize()
+        self.setOSVersionCode()
+        self.setLauncher()
     }
     
 }
 
 class LowPricePhoneBuilder: AndroidPhoneBuilder {
-    func setOSVersion() {
-        self.phone.osVersion = "Android 1.6"
-    }
     
-    func setName() {
-        self.phone.name = "ShittyPhone"
-    }
-    
-    func setCPUCodeName() {
-        self.phone.cpuCodeName = "Old CPU 800mHz"
-    }
-    
-    func setRAMsize() {
-        self.phone.RAMsize = 256
-    }
-    
-    func setOSVersionCode() {
-        self.phone.osVersionCode = 1.6
-    }
-    
-    func setLauncher() {
-        self.phone.launcher = "ShitWey"
-    }
+    override func setOSVersion() {        self.phone.osVersion = "Android 1.6"    }
+    override func setName() {        self.phone.name = "ShittyPhone"    }
+    override func setCPUCodeName() {        self.phone.cpuCodeName = "Old CPU 800mHz"    }
+    override func setRAMsize() {        self.phone.RAMsize = 256    }
+    override func setOSVersionCode() {        self.phone.osVersionCode = 1.6    }
+    override func setLauncher() {        self.phone.launcher = "ShitWey"    }
 }
 
 class HighPricePhoneBuilder: AndroidPhoneBuilder {
-    func setOSVersion() {
-        self.phone.osVersion = "Android 7.0"
-    }
     
-    func setName() {
-        self.phone.name = "Big PRO"
-    }
-    
-    func setCPUCodeName() {
-        self.phone.cpuCodeName = "1200 x 8 CPU"
-    }
-    
-    func setRAMsize() {
-        self.phone.RAMsize = 4096
-    }
-    
-    func setOSVersionCode() {
-        self.phone.osVersionCode = 7.0
-    }
-    
-    func setLauncher() {
-        self.phone.launcher = "HTC Super Hight"
-    }
+    override func setOSVersion() {        self.phone.osVersion = "Android 7.0"    }
+    override func setName() {        self.phone.name = "Big PRO"    }
+    override func setCPUCodeName() {        self.phone.cpuCodeName = "1200 x 8 CPU"    }
+    override func setRAMsize() {        self.phone.RAMsize = 4096    }
+    override func setOSVersionCode() {        self.phone.osVersionCode = 7.0    }
+    override func setLauncher() {        self.phone.launcher = "HTC Super Hight"    }
 }
 
 class FactorySalesMan {
     
     var builder = AndroidPhoneBuilder()
-    
     func setBuilder(aBuilder: AndroidPhoneBuilder) {
         self.builder = aBuilder
     }
     
-    func getPhone() -> AndriodPhone {
+    func getPhone() -> AndroidPhone {
         return self.builder.getPhone()
     }
     
     func constuctPhone() {
         if let builder = builder as? LowPricePhoneBuilder {
-            builder.setOSVersion()
-            builder.setName()
-            builder.setCPUCodeName()
-            builder.setRAMsize()
-            builder.setOSVersionCode()
-            builder.setLauncher()
+            
+            builder.build()
             
         } else if let builder = builder as? HighPricePhoneBuilder {
-            builder.setOSVersion()
-            builder.setName()
-            builder.setCPUCodeName()
-            builder.setRAMsize()
-            builder.setOSVersionCode()
-            builder.setLauncher()
+            
+            builder.build()
         }
     }
 }

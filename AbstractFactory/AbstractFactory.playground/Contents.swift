@@ -36,10 +36,9 @@ class AppleIPad: GenericPad {
     var screenSize: Float?
     
     init() {
-        //super.init()
         self.productName = "iPad"
         self.osName = "iOS"
-        self.screenSize = 7.7
+        self.screenSize = 12.1
     }
 }
 
@@ -49,7 +48,6 @@ class FakePhone: GenericPhone {
     var osName: String?
  
     init() {
-        //super.init()
         self.productName = "FakeFon"
         self.osName = "Android"
     }
@@ -61,10 +59,9 @@ class FakePad: GenericPad {
     var screenSize: Float?
  
     init() {
-        //super.init()
         self.productName = "FakePad"
         self.osName = "Android"
-        self.screenSize = 12.1
+        self.screenSize = 7.7
     }
 }
 
@@ -97,7 +94,7 @@ class FakeFactory: IPhoneFactory {
 
 
 //Using factories
-var isLowMoney: Bool = true
+var isLowMoney: Bool = false
 
 func getFactory() -> IPhoneFactory {
     if (isLowMoney) {
