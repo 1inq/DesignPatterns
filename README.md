@@ -9,7 +9,7 @@
 
 
 *Structural patterns:*
-+ ~~Composite~~
++ [Composite](https://github.com/1inq/DesignPatterns/tree/master/Composite)
 + [Decorator](https://github.com/1inq/DesignPatterns/tree/master/Decorator)
 + [Adapter](https://github.com/1inq/DesignPatterns/tree/master/Adapter)
 + ~~Proxy~~

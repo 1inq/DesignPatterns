@@ -93,7 +93,7 @@ class FakeFactory: IPhoneFactory {
 }
 
 
-//Using factories
+//Usage factories
 var isLowMoney: Bool = false
 
 func getFactory() -> IPhoneFactory {
