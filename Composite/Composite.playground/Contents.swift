@@ -27,7 +27,7 @@ class Container: CompositeObjectsProtocol {
         for obj in components {
             valueToReturn.append(contentsOf: obj.getData())
         }
-        valueToReturn.append(contentsOf: "\n</ContainerValues>\n")
+        valueToReturn.append(contentsOf: "\n</ContainerValues>")
         return valueToReturn
     }
 }

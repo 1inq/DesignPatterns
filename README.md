@@ -13,7 +13,7 @@
 + [Decorator](https://github.com/1inq/DesignPatterns/tree/master/Decorator)
 + [Adapter](https://github.com/1inq/DesignPatterns/tree/master/Adapter)
 + ~~Proxy~~
-+ ~~Facade~~
++ [Facade](https://github.com/1inq/DesignPatterns/tree/master/Facade)
 + ~~Bridge~~
 + ~~Flyweight~~
 
